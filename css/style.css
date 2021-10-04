@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    max-width: 100%;
+    color: white;
+    background-color: grey;
+    background-image:url("https://wallpapercave.com/wp/liuVVtw.jpg");
+}
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background: black;
+}
+nav ul {
+    position: fixed;
+    width: 100%;
+    height: 120vh;
+    padding: 16px;
+    background: gray;
+    left: -100%;
+    transition: all .5s;
+}
+nav li {
+    margin: 0px 0px 16px 16px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(31, 31, 31, 0.658);
+    text-transform: uppercase;
+}
+nav a:hover {
+    color: darkgrey;
+    transition: ease-in .1s;
+}
+aside {
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    justify-content: center;
+    border: solid white;
+    border-radius: 10px;
+}
+footer {
+    padding-bottom:  10px;
+    text-align: center;
+    background-color: black;
+    color: darkgrey;
+}
+footer ul li {
+    padding: 10px;
+}
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.wrapper>* {
+    padding: 10px;
+    flex: 1 100%;
+}
+.toggler {
+    display: none;
+}
+.toggler:checked ~ nav ul {
+    left: 0;
+}
+.logo {
+    display: flex;
+    height: 80px;
+    width: 80px;
+    margin-left: 16px;
+}
+.burger {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-right: 16px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    text-shadow: 2px 2px 4px rgba(31, 31, 31, 0.658);
+    font-size: 35px;
+    color: white;
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+/* Tablet screen */
+
+@media all and (min-width: 480px) {
+}
+
+/* Desktop screen */
+
+@media all and (min-width: 768px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(700px, 3fr);
+    }
+    nav {
+        display: flex;
+        grid-column: 3/4;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul {
+        display: inline-flex;
+        all: unset;
+        list-style: none;
+    }
+    nav li {
+        margin: 0px 16px 0px 0px;
+    }
+    .burger {
+        display: none;
+    }
+}
+
