@@ -44,7 +44,7 @@ aside {
     margin: 20px;
     padding: 10px;
     justify-content: center;
-    border: solid white;
+    border: dotted white;
     border-radius: 10px;
 }
 footer {
@@ -89,6 +89,74 @@ footer ul li {
     font-size: 35px;
     color: white;
 }
+.container1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.large-card {
+    background: black;
+    width: 220px;
+    height: 260px;
+    margin: 10px;
+    border-radius: 15px;
+}
+.image-large-card {
+    height: 150px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px; 
+}
+.image-large-card img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.large-card h2 {
+    padding: 15px;
+}
+.large-card p {
+    padding: 15px;
+}
+.large-card a {
+    text-decoration: none;
+    color: white;
+}
+.container2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    background: black;
+    width: 220px;
+    height: 260px;
+    margin: 10px;
+    border-radius: 15px;
+}
+.card h2 {
+    padding: 15px;
+}
+.card p {
+    padding: 15px;
+}
+.card a {
+    text-decoration: none;
+    color: white;
+}
+.image-card {
+    height: 150px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px;
+}
+.image-card img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
 .social-media {
     display: flex;
     justify-content: center;
@@ -97,6 +165,9 @@ footer ul li {
 /* Tablet screen */
 
 @media all and (min-width: 480px) {
+    aside {
+        flex: 1;
+    }
 }
 
 /* Desktop screen */
@@ -120,8 +191,38 @@ footer ul li {
     nav li {
         margin: 0px 16px 0px 0px;
     }
+    footer {
+        order: 4;
+    }
+    main {
+        flex: 3;
+        order: 2;
+    }
+    .aside1 {
+        order: 1;
+    }
+    .aside2 {
+        order: 2;
+    }
     .burger {
         display: none;
     }
+    .container1 {
+        margin-bottom: 150px;
+    }
+    .container2 {
+        margin-top: 100px;
+    }
+    .large-card {
+        width: 44%;
+        background-color: inherit;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .text-block h2 {
+        display: none;
+    }
+    .text-block time {
+        display:none;
+    }
 }
-
